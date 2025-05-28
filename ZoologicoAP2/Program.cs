@@ -121,8 +121,7 @@ void Interagir()
     }
 
     Console.Write("Selecione o índice do animal: ");
-// Lê a entrada do usuário (número mostrado na lista), converte para int, 
-// e subtrai 1 para ajustar ao índice real da lista, que começa do 0. 
+    // Lê a entrada do usuário (número mostrado na lista), converte para int, 
     int idxAnimal = int.Parse(Console.ReadLine()!);
 
     // Exibe os funcionários cadastrados.
@@ -132,11 +131,9 @@ void Interagir()
         Console.WriteLine($"{i}: {funcionarios[i].Nome} ({funcionarios[i].Cargo})");
     }
 
-Console.Write("Selecione o número do funcionário: ");
-// Lê a entrada do usuário (número mostrado na lista), converte para int, 
-// e subtrai 1 para ajustar ao índice real da lista, que começa do 0.
-int idxFunc = int.Parse(Console.ReadLine()!) - 1;
-
+    Console.Write("Selecione o índice do funcionário: ");
+    // Lê a entrada do usuário (número mostrado na lista), converte para int
+    int idxFunc = int.Parse(Console.ReadLine()!);
 
     // Obtém o animal e o funcionário selecionados.
     Animal animal = animais[idxAnimal];
