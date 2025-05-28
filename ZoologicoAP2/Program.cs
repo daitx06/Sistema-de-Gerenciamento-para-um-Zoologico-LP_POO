@@ -1,4 +1,4 @@
-﻿// Lista que armazenará todos os animais cadastrados.
+// Lista que armazenará todos os animais cadastrados.
 List<Animal> animais = new();
 
 // Lista que armazenará todos os funcionários cadastrados.
@@ -121,6 +121,8 @@ void Interagir()
     }
 
     Console.Write("Selecione o índice do animal: ");
+// Lê a entrada do usuário (número mostrado na lista), converte para int, 
+// e subtrai 1 para ajustar ao índice real da lista, que começa do 0. 
     int idxAnimal = int.Parse(Console.ReadLine()!);
 
     // Exibe os funcionários cadastrados.
@@ -130,8 +132,11 @@ void Interagir()
         Console.WriteLine($"{i}: {funcionarios[i].Nome} ({funcionarios[i].Cargo})");
     }
 
-    Console.Write("Selecione o índice do funcionário: ");
-    int idxFunc = int.Parse(Console.ReadLine()!);
+Console.Write("Selecione o número do funcionário: ");
+// Lê a entrada do usuário (número mostrado na lista), converte para int, 
+// e subtrai 1 para ajustar ao índice real da lista, que começa do 0.
+int idxFunc = int.Parse(Console.ReadLine()!) - 1;
+
 
     // Obtém o animal e o funcionário selecionados.
     Animal animal = animais[idxAnimal];
